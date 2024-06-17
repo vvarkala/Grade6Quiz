@@ -1,6 +1,146 @@
-<html>
- <head></head>
- <body>
-    <H1>TEST</H1>>
- </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Quiz Scores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <div id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+            <button onclick="login()">Login</button>
+            <p id="login-message" class="hidden"></p>
+        </div>
+
+        <div id="quiz-scores" class="hidden">
+            <h2>Quiz Scores</h2>
+            <table id="scores-table">
+                <thead>
+                    <tr>
+                        <th>Quiz Name</th>
+                        <th>Score</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="quiz-list" class="hidden">
+            <h2>Available Quizzes</h2>
+            <table id="quizzes-table">
+                <thead>
+                    <tr>
+                        <th>Quiz Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const webAppUrl = 'https://script.google.com/macros/s/AKfycbzPRA5GdEflrbeNT4UaaSwt5ozhk9Ea8hIYPXtym_kOm2PMG5HoIaipmH1MxOgIC7iUPw/exec';
+
+        async function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch(webAppUrl, {
+                method: 'POST',
+                body: new URLSearchParams({
+                    action: 'login',
+                    username: username,
+                    password: password
+                })
+            });
+            const result = await response.json();
+
+            if (result.status === 'success') {
+                document.getElementById('login-form').classList.add('hidden');
+                document.getElementById('quiz-scores').classList.remove('hidden');
+                document.getElementById('quiz-list').classList.remove('hidden');
+                getScores(username);
+                getQuizzes();
+            } else {
+                document.getElementById('login-message').textContent = 'Invalid username or password';
+                document.getElementById('login-message').classList.remove('hidden');
+            }
+        }
+
+        async function getScores(username) {
+            const response = await fetch(webAppUrl, {
+                method: 'POST',
+                body: new URLSearchParams({
+                    action: 'getScores',
+                    username: username
+                })
+            });
+            const result = await response.json();
+
+            if (result.status === 'success') {
+                const scoresTable = document.getElementById('scores-table').getElementsByTagName('tbody')[0];
+                result.scores.forEach(score => {
+                    let row = scoresTable.insertRow();
+                    let cell1 = row.insertCell(0);
+                    let cell2 = row.insertCell(1);
+                    let cell3 = row.insertCell(2);
+                    cell1.innerHTML = score.quizName;
+                    cell2.innerHTML = score.score;
+                    cell3.innerHTML = score.date;
+                });
+            }
+        }
+
+        async function getQuizzes() {
+            const response = await fetch(webAppUrl, {
+                method: 'POST',
+                body: new URLSearchParams({
+                    action: 'getQuizzes'
+                })
+            });
+            const result = await response.json();
+
+            if (result.status === 'success') {
+                const quizzesTable = document.getElementById('quizzes-table').getElementsByTagName('tbody')[0];
+                result.quizzes.forEach(quiz => {
+                    let row = quizzesTable.insertRow();
+                    let cell1 = row.insertCell(0);
+                    let cell2 = row.insertCell(1);
+                    cell1.innerHTML = quiz.quizName;
+                    cell2.innerHTML = quiz.quizDescription;
+                });
+            }
+        }
+    </script>
+</body>
 </html>
