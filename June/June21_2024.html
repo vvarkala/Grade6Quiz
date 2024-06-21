@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 6 Reading Comprehension Quiz</title>
+    <link rel="stylesheet" href="../js/quizcommon.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>  
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="/index.html">Home</a>
+        <!-- <a href="#news">News</a>
+        <a href="#contact">Contact</a> -->
+        <div class="topnav-right">
+            <a href="#" id="txtusername">username</a>
+        </div>
+    </div>
+
+    <!-- PAGE LOADER : PLACE RIGHT AFTER BODY TAG -->
+    <div id="loadingdiv" class="page-loader">
+        <div class="spinner"></div>
+        <div class="txt">Processing<br>Please wait...</div>
+    </div>
+    <!-- PAGE LOADER END : PLACE RIGHT AFTER BODY TAG -->
+
+    <div class="quiz-container">
+        <div id="timer">Time Left: <span id="time">30:00</span></div>
+        <form id="quiz-form">
+         <div class="clearfix">
+          <div class="box passage" style="background-color:#ccc">
+                <h2>Reading Passage</h2>
+                <p>
+                    In a faraway land, nestled between rolling hills and lush forests, there was a small town named Willowbrook. The town was known for its beautiful landscapes and friendly inhabitants. Willowbrook had a rich history that dated back hundreds of years. The townsfolk cherished their traditions, and one of the most beloved traditions was the annual Harvest Festival. 
+                </p>
+                <p>
+                    Every autumn, the residents of Willowbrook gathered in the town square to celebrate the harvest. There were stalls filled with fresh produce, handmade crafts, and delicious homemade treats. Music filled the air as local bands played, and children ran around playing games and laughing. It was a time of joy and gratitude, where everyone came together to appreciate the bounty of nature.
+                </p>
+                <p>
+                    One year, the festival was particularly special. A renowned storyteller named Elias had traveled from a distant land to share his tales. The townspeople were excited to hear his stories, and they gathered around eagerly as he began to speak. Elias had a way with words that captivated his audience. He told stories of brave heroes, mystical creatures, and enchanted lands.
+                </p>
+                <p>
+                    Among the listeners was a young girl named Lily. She was enchanted by Elias's stories and dreamed of having adventures of her own. Lily spent hours talking to Elias, asking him about his travels and the places he had seen. Elias was impressed by Lily's curiosity and imagination. Before he left, he gave her a small, leather-bound journal and told her to write her own stories.
+                </p>
+                <p>
+                    Inspired by Elias's gift, Lily began writing in her journal every day. She wrote about the adventures she imagined, the characters she created, and the magical places she dreamed of visiting. As she wrote, she discovered a passion for storytelling and realized that she had a talent for it. Over the years, Lily's stories became more detailed and imaginative. She shared them with her friends and family, who encouraged her to continue writing.
+                </p>
+                <p>
+                    Eventually, Lily's stories caught the attention of a local publisher, who offered to publish her work. Her first book was a collection of short stories that were inspired by the tales Elias had told at the Harvest Festival. The book was a success, and Lily became a beloved author in Willowbrook. Her stories brought joy and inspiration to many, just as Elias's stories had inspired her.
+                </p>
+          </div>
+          <div class="box questions" style="background-color:#ddd">
+            <div class="question" id="q1-container">
+                <h3>Question 1: What was the name of the town where the story took place?</h3>
+                <div class="multiple-choice">
+                    <input type="radio" name="q1" value="A" required> A) Greendale<br>
+                    <input type="radio" name="q1" value="B"> B) Willowbrook<br>
+                    <input type="radio" name="q1" value="C"> C) Brookfield<br>
+                    <input type="radio" name="q1" value="D"> D) Oakwood
+                </div>
+                <div class="feedback" id="q1-feedback"></div>
+                <div class="error" id="q1-error"></div>
+            </div>
+            
+
+            <div class="question" id="q2-container">
+                <h3>Question 2: What was the special event celebrated annually in Willowbrook?</h3>
+                <div class="multiple-choice">
+                    <input type="radio" name="q2" value="A" required> A) The Winter Festival<br>
+                    <input type="radio" name="q2" value="B"> B) The Spring Fair<br>
+                    <input type="radio" name="q2" value="C"> C) The Harvest Festival<br>
+                    <input type="radio" name="q2" value="D"> D) The Summer Carnival
+                </div>
+                <div class="feedback" id="q2-feedback"></div>
+                <div class="error" id="q2-error"></div>
+            </div>
+
+            <div class="question" id="q3-container">
+                <h3>Question 3: Who was the renowned storyteller that visited Willowbrook?</h3>
+                <div class="multiple-choice">
+                    <input type="radio" name="q3" value="A" required> A) Elias<br>
+                    <input type="radio" name="q3" value="B"> B) Lily<br>
+                    <input type="radio" name="q3" value="C"> C) John<br>
+                    <input type="radio" name="q3" value="D"> D) Samuel
+                </div>
+                <div class="feedback" id="q3-feedback"></div>
+                <div class="error" id="q3-error"></div>
+            </div>
+
+            <div class="question" id="q4-container">
+                <h3>Question 4: What did Elias give to Lily before he left?</h3>
+                <div class="multiple-choice">
+                    <input type="radio" name="q4" value="A" required> A) A pen<br>
+                    <input type="radio" name="q4" value="B"> B) A map<br>
+                    <input type="radio" name="q4" value="C"> C) A journal<br>
+                    <input type="radio" name="q4" value="D"> D) A book
+                </div>
+                <div class="feedback" id="q4-feedback"></div>
+                <div class="error" id="q4-error"></div>
+            </div>
+
+            <div class="question" id="q5-container">
+                <h3>Question 5: What did Lily discover about herself through writing?</h3>
+                <div class="multiple-choice">
+                    <input type="radio" name="q5" value="A" required> A) She loved painting<br>
+                    <input type="radio" name="q5" value="B"> B) She had a talent for storytelling<br>
+                    <input type="radio" name="q5" value="C"> C) She wanted to travel<br>
+                    <input type="radio" name="q5" value="D"> D) She enjoyed gardening
+                </div>
+                <div class="feedback" id="q5-feedback"></div>
+                <div class="error" id="q5-error"></div>
+            </div>
+
+            <div class="question" id="q6-container">
+                <h3>Question 6: Write a summary of Lily's journey from being inspired by Elias to becoming a published author (min 40 words).</h3>
+                <div class="write-up">
+                    <textarea name="q6" id="q6" rows="6"  required oninput="countWords('q6', 40)" style="width:100%;"></textarea>
+                    <div class="word-counter" id="q6-word-counter">Word count: 0</div>
+                </div>
+                <div class="feedback" id="q6-feedback"></div>
+                <div class="error" id="q6-error"></div>
+            </div>
+
+            <div class="question" id="q7-container">
+                <h3>Question 7: What lesson did Lily learn from her experiences (min 30 words)?</h3>
+                <div class="write-up">
+                    <textarea name="q7" id="q7" rows="6" required oninput="countWords('q7', 30)" style="width:100%;"></textarea>
+                    <div class="word-counter" id="q7-word-counter">Word count: 0</div>
+                </div>
+                <div class="feedback" id="q7-feedback"></div>
+                <div class="error" id="q7-error"></div>
+            </div>
+            <button type="button" onclick="submitQuiz()">Submit</button>
+          </div>
+        </div>
+        </form>
+    </div>
+
+    <script>
+        //Define Variables
+        let timeLeft = 1800; // 30 minutes
+        const correctAnswers = {
+                q1: {type:'multiplechoice', answer:'B'},
+                q2: {type:'multiplechoice', answer:'C'},
+                q3: {type:'multiplechoice', answer:'A'},
+                q4: {type:'multiplechoice', answer:'C'},
+                q5: {type:'multiplechoice', answer:'B'},
+                q6: {type:'text', minWords:40, answer:"Inspired by storyteller Elias at Willowbrook's Harvest Festival, Lily began writing daily in a gifted journal. Her growing talent led to a local publisher's offer, and her first book's success made Lily a beloved author, spreading joy and inspiration."},
+                q7: {type:'text', minWords:30, answer:"Lily learned that pursuing her passion for storytelling could bring personal fulfillment and inspire others, showing the transformative power of creativity and dedication."}
+            };
+
+        window.onload = (event) => {
+            startTimer();
+        };
+    </script>
+</body>
+</html>

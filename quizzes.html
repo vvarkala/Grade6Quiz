@@ -4,47 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login and Quiz Scores</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <title>Grade 6 Reading Comprehension Quiz</title>
+    <link rel="stylesheet" href="../js/quizcommon.css">
+    <script src="../js/common.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Login</h1>
-        <div id="login-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" required><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" required><br>
-            <button onclick="login()">Login</button>
-            <p id="login-message" class="hidden"></p>
+    <div class="topnav">
+        <a class="active" href="/index.html">Home</a>
+        <!-- <a href="#news">News</a>
+        <a href="#contact">Contact</a> -->
+        <div class="topnav-right">
+            <a href="#" id="txtusername">username</a>
         </div>
+    </div>
+
+    <div id="loadingdiv" class="page-loader">
+        <div class="spinner"></div>
+        <div class="txt">Processing<br>Please wait...</div>
+    </div>
+
+    <div class="container">
+        <h1>Welcome </h1>
 
         <div id="quiz-scores" class="hidden">
             <h2>Quiz Scores</h2>
@@ -75,46 +56,11 @@
             </table>
         </div>
     </div>
-
     <script>
-
-        function checkSession() {
-            const username = getCookie("username");
-            if (username) {
-                document.getElementById('login-form').classList.add('hidden');
-                document.getElementById('quiz-scores').classList.remove('hidden');
-                document.getElementById('quiz-list').classList.remove('hidden');
-                getScores(username);
-                getQuizzes();
-            }
-        }
-
-        async function login() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            const response = await fetch(webAppUrl, {
-                method: 'POST',
-                body: new URLSearchParams({
-                    action: 'login',
-                    username: username,
-                    password: password
-                })
-            });
-            const result = await response.json();
-
-            if (result.status === 'success') {
-                setCookie("username", username, 12);
-                document.getElementById('login-form').classList.add('hidden');
-                document.getElementById('quiz-scores').classList.remove('hidden');
-                document.getElementById('quiz-list').classList.remove('hidden');
-                getScores(username);
-                getQuizzes();
-            } else {
-                document.getElementById('login-message').textContent = 'Invalid username or password';
-                document.getElementById('login-message').classList.remove('hidden');
-            }
-        }
+        document.addEventListener('DOMContentLoaded', () => {
+            getScores(username);
+            getQuizzes();
+        });
 
         async function getScores(username) {
             const response = await fetch(webAppUrl, {
