@@ -1,0 +1,105 @@
+{
+    "id": "june_22_2024_5",
+    "title": "Lucy's Magical Paintbrush",
+    "description": "A magical story about Lucy discovering the power of her paintbrush to bring her paintings to life.",
+    "quiz_time": 1800,
+    "passage": {
+        "paragraphs": [
+            "Lucy loved to paint. Her room was filled with colorful paintings of landscapes, animals, and fantastical scenes. One day, her grandmother gave her a special paintbrush, saying it was magical.",
+            "Lucy was skeptical but excited to try it. She started painting a beautiful garden with flowers, butterflies, and birds. As she painted, she noticed something incredible happening. The butterflies began to flutter, and the birds started to sing.",
+            "Amazed, Lucy realized that the paintbrush could bring her paintings to life. She painted a rainbow, and it appeared in the sky outside her window. She painted a friendly dog, and it jumped off the canvas to play with her.",
+            "Lucy was thrilled with her new ability but soon realized that she needed to be careful with what she painted. She painted a dragon, and it roared to life, causing chaos in her room. Quickly, she painted a cage around the dragon to contain it.",
+            "With her grandmother's guidance, Lucy learned to use the paintbrush wisely. She painted things that brought joy and beauty to the world, like flowers, happy animals, and sunny skies. Her magical paintings made her town a brighter, happier place."
+        ]
+    },
+    "questions": [
+        {
+            "id": "q1",
+            "text": "What did Lucy's grandmother give her?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A box of paints" },
+                { "value": "B", "text": "A sketchbook" },
+                { "value": "C", "text": "A magical paintbrush" },
+                { "value": "D", "text": "An easel" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q2",
+            "text": "What was the first thing Lucy noticed when she used the magical paintbrush?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "The paint dried quickly" },
+                { "value": "B", "text": "The colors were brighter" },
+                { "value": "C", "text": "The butterflies and birds in her painting came to life" },
+                { "value": "D", "text": "The paintbrush was heavy" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q3",
+            "text": "What did Lucy paint that caused chaos in her room?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A storm" },
+                { "value": "B", "text": "A dragon" },
+                { "value": "C", "text": "A lion" },
+                { "value": "D", "text": "A monster" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q4",
+            "text": "How did Lucy contain the dragon she painted?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "She painted a cage around it" },
+                { "value": "B", "text": "She erased it" },
+                { "value": "C", "text": "She painted water" },
+                { "value": "D", "text": "She painted another dragon" }
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "q5",
+            "text": "What did Lucy learn to paint with her magical paintbrush?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Scary things" },
+                { "value": "B", "text": "Things that brought joy and beauty" },
+                { "value": "C", "text": "Only animals" },
+                { "value": "D", "text": "Only flowers" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q6",
+            "text": "How did Lucy's paintings affect her town?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "They made the town darker" },
+                { "value": "B", "text": "They had no effect" },
+                { "value": "C", "text": "They made the town a brighter, happier place" },
+                { "value": "D", "text": "They caused problems" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q7",
+            "text": "Write a summary of Lucy's experience with the magical paintbrush.",
+            "type": "writeup",
+            "minWords": 40,
+            "sampleAnswer": "Lucy received a magical paintbrush from her grandmother and discovered that it could bring her paintings to life. She painted a beautiful garden, and the butterflies and birds came to life. She painted a rainbow and a dog, which also came to life. However, when she painted a dragon, it caused chaos, and she had to paint a cage around it to contain it. With her grandmother's guidance, Lucy learned to use the paintbrush wisely, painting things that brought joy and beauty to the world. Her magical paintings made her town a brighter, happier place.",
+            "keywords": ["Lucy", "magical paintbrush", "grandmother", "paintings", "came to life", "garden", "butterflies", "birds", "rainbow", "dog", "dragon", "chaos", "cage", "guidance", "joy", "beauty", "town", "brighter", "happier"]
+        },
+        {
+            "id": "q8",
+            "text": "What lesson did Lucy learn from using the magical paintbrush?",
+            "type": "writeup",
+            "minWords": 30,
+            "sampleAnswer": "Lucy learned the importance of using her magical paintbrush responsibly. She realized that her paintings could have real consequences and that she should create things that bring joy and beauty to the world.",
+            "keywords": ["lesson", "Lucy", "magical paintbrush", "responsibility", "paintings", "consequences", "joy", "beauty"]
+        }
+    ]
+}

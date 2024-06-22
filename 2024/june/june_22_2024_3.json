@@ -1,0 +1,105 @@
+{
+    "id": "june_22_2024_3",
+    "title": "The Mystery of the Lost Treasure",
+    "description": "An exciting adventure story about three friends solving the mystery of a lost treasure in their town.",
+    "quiz_time": 1800,
+    "passage": {
+        "paragraphs": [
+            "In the small town of Maplewood, there was a legend about a lost treasure buried somewhere in the old forest. Many people had searched for it, but no one had ever found it. The legend fascinated three friends, Emma, Liam, and Noah, who decided to solve the mystery.",
+            "One summer, they found an old map in the attic of Emma's house. The map showed a path through the forest and marked the spot where the treasure was supposed to be buried. Excited, the friends packed their bags and set off on the adventure.",
+            "They followed the map, crossing streams and climbing hills. Along the way, they encountered various challenges, like deciphering ancient clues and solving puzzles. They worked together, using their different skills to overcome each obstacle.",
+            "After a long and exhausting journey, they finally reached the spot marked on the map. They dug into the ground and uncovered a chest filled with gold coins, jewels, and artifacts. It was the lost treasure!",
+            "The friends returned to Maplewood as heroes. The town celebrated their success, and the treasure was placed in the local museum. Emma, Liam, and Noah learned that teamwork and perseverance could lead to incredible discoveries."
+        ]
+    },
+    "questions": [
+        {
+            "id": "q1",
+            "text": "Where did the friends find the old map?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "In the forest" },
+                { "value": "B", "text": "In the attic of Emma's house" },
+                { "value": "C", "text": "In the school library" },
+                { "value": "D", "text": "In the town hall" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q2",
+            "text": "What challenges did the friends face on their journey?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Crossing streams and climbing hills" },
+                { "value": "B", "text": "Deciphering ancient clues" },
+                { "value": "C", "text": "Solving puzzles" },
+                { "value": "D", "text": "All of the above" }
+            ],
+            "answer": "D"
+        },
+        {
+            "id": "q3",
+            "text": "What did the friends find at the spot marked on the map?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A new map" },
+                { "value": "B", "text": "A secret passage" },
+                { "value": "C", "text": "A chest filled with treasure" },
+                { "value": "D", "text": "A hidden cave" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q4",
+            "text": "How did the town of Maplewood react to the friends' discovery?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "They were indifferent" },
+                { "value": "B", "text": "They celebrated their success" },
+                { "value": "C", "text": "They were disappointed" },
+                { "value": "D", "text": "They ignored it" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q5",
+            "text": "Where was the treasure placed after it was found?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "In Emma's house" },
+                { "value": "B", "text": "In the forest" },
+                { "value": "C", "text": "In the local museum" },
+                { "value": "D", "text": "In the town hall" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q6",
+            "text": "What did the friends learn from their adventure?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "That treasure hunts are easy" },
+                { "value": "B", "text": "That teamwork and perseverance can lead to incredible discoveries" },
+                { "value": "C", "text": "That legends are always true" },
+                { "value": "D", "text": "That they should never go into the forest" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q7",
+            "text": "Write a summary of the friends' adventure and their discovery.",
+            "type": "writeup",
+            "minWords": 40,
+            "sampleAnswer": "Emma, Liam, and Noah found an old map in Emma's attic that led to the lost treasure of Maplewood. They embarked on an adventure, facing challenges like crossing streams, climbing hills, deciphering ancient clues, and solving puzzles. Working together, they finally reached the spot marked on the map and found a chest filled with treasure. They returned as heroes, and the treasure was placed in the local museum. The friends learned that teamwork and perseverance could lead to incredible discoveries.",
+            "keywords": ["Emma", "Liam", "Noah", "old map", "attic", "lost treasure", "Maplewood", "adventure", "challenges", "streams", "hills", "clues", "puzzles", "teamwork", "perseverance", "incredible discoveries"]
+        },
+        {
+            "id": "q8",
+            "text": "What lesson did the friends learn from their treasure hunt?",
+            "type": "writeup",
+            "minWords": 30,
+            "sampleAnswer": "The friends learned that teamwork and perseverance are essential for overcoming challenges and making incredible discoveries. Their adventure taught them the importance of working together and never giving up.",
+            "keywords": ["lesson", "friends", "treasure hunt", "teamwork", "perseverance", "challenges", "discoveries", "working together", "never giving up"]
+        }
+    ]
+}

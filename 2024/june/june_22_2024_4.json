@@ -1,0 +1,105 @@
+{
+    "id": "june_22_2024_4",
+    "title": "The Secret of Willow Creek",
+    "description": "A thrilling mystery about a hidden secret in the small town of Willow Creek.",
+    "quiz_time": 1800,
+    "passage": {
+        "paragraphs": [
+            "Willow Creek was a peaceful town with a picturesque landscape and friendly residents. But the town had a secret that only a few knew about. There was a hidden cave near the creek that was said to hold a mysterious artifact.",
+            "One day, two siblings, Alex and Mia, overheard their grandfather talking about the cave. Intrigued, they decided to find it. With a map drawn by their grandfather, they set off on an adventure.",
+            "As they followed the map, they encountered various obstacles, including a dense forest and a fast-flowing river. They had to use their wits and courage to navigate through these challenges.",
+            "Finally, they reached the cave entrance. It was well-hidden and covered with vines. Alex and Mia carefully entered the cave and found an ancient artifact glowing in the dark. It was a beautiful crystal that radiated light.",
+            "They took the crystal back to their grandfather, who explained its significance. The crystal was a symbol of hope and protection for the town. Alex and Mia had uncovered a piece of Willow Creek's history, and their discovery was celebrated by the entire town."
+        ]
+    },
+    "questions": [
+        {
+            "id": "q1",
+            "text": "What was hidden near Willow Creek?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A treasure chest" },
+                { "value": "B", "text": "A mysterious artifact" },
+                { "value": "C", "text": "A map" },
+                { "value": "D", "text": "A secret passage" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q2",
+            "text": "Who drew the map that Alex and Mia used?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Their father" },
+                { "value": "B", "text": "Their grandfather" },
+                { "value": "C", "text": "Their friend" },
+                { "value": "D", "text": "Their teacher" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q3",
+            "text": "What did Alex and Mia find inside the cave?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A secret room" },
+                { "value": "B", "text": "An ancient artifact" },
+                { "value": "C", "text": "A hidden door" },
+                { "value": "D", "text": "A treasure map" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q4",
+            "text": "What was the significance of the crystal they found?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "It was a symbol of hope and protection for the town" },
+                { "value": "B", "text": "It was just a pretty decoration" },
+                { "value": "C", "text": "It was a toy" },
+                { "value": "D", "text": "It was a key" }
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "q5",
+            "text": "How did the town of Willow Creek react to Alex and Mia's discovery?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "They were angry" },
+                { "value": "B", "text": "They ignored it" },
+                { "value": "C", "text": "They celebrated their discovery" },
+                { "value": "D", "text": "They were confused" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q6",
+            "text": "What challenges did Alex and Mia face on their way to the cave?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A dense forest" },
+                { "value": "B", "text": "A fast-flowing river" },
+                { "value": "C", "text": "Both A and B" },
+                { "value": "D", "text": "A and a secret maze" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q7",
+            "text": "Write a summary of Alex and Mia's adventure and their discovery.",
+            "type": "writeup",
+            "minWords": 40,
+            "sampleAnswer": "Alex and Mia discovered a hidden cave near Willow Creek after overhearing their grandfather talking about it. With a map drawn by their grandfather, they navigated through obstacles like a dense forest and a fast-flowing river. Inside the cave, they found an ancient artifact, a glowing crystal. Their grandfather explained its significance as a symbol of hope and protection for the town. The town celebrated their discovery, and Alex and Mia learned about the importance of courage and exploration.",
+            "keywords": ["Alex", "Mia", "hidden cave", "Willow Creek", "grandfather", "map", "obstacles", "forest", "river", "ancient artifact", "crystal", "symbol", "hope", "protection", "town", "celebration", "courage", "exploration"]
+        },
+        {
+            "id": "q8",
+            "text": "What lesson did Alex and Mia learn from their adventure?",
+            "type": "writeup",
+            "minWords": 30,
+            "sampleAnswer": "Alex and Mia learned that courage and determination are essential for discovering hidden truths and solving mysteries. Their adventure taught them the value of exploration and the importance of their town's history.",
+            "keywords": ["lesson", "Alex", "Mia", "adventure", "courage", "determination", "hidden truths", "mysteries", "exploration", "town's history"]
+        }
+    ]
+}

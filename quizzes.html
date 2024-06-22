@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade 6 Reading Comprehension Quiz</title>
     <link rel="stylesheet" href="/css/common.css" />
-    <script src="/js/common.js"></script>
+    <script src="/js/english_common.js"></script>
 </head>
 
 <body>
     <div class="topnav">
-        <a class="active" href="/index.html">Home</a>
-        <!-- <a href="#news">News</a>
-        <a href="#contact">Contact</a> -->
+        <a class="active" href="/quizzes.html" id="nav-home">Quizzes</a>
         <div class="topnav-right">
-            <a href="#" id="txtusername">username</a>
+            <a href="#" id="txtusername"></a>
         </div>
     </div>
 
@@ -104,7 +102,7 @@
                     let row = quizzesTable.insertRow();
                     let cell1 = row.insertCell(0);
                     let cell2 = row.insertCell(1);
-                    cell1.innerHTML = `<a href="${quiz.link}" >${quiz.quizName}</a>`;
+                    cell1.innerHTML = `<a href="english.html?quiz=${quiz.link}" >${quiz.quizName}</a>`;
                     cell2.innerHTML = quiz.quizDescription;
                 });
             }

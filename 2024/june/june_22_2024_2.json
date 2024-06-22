@@ -1,0 +1,105 @@
+{
+    "id": "june_22_2024_2",
+    "title": "Ben's Science Fair Project",
+    "description": "A story about Ben's hard work and creativity in preparing for the school science fair.",
+    "quiz_time": 1800,
+    "passage": {
+        "paragraphs": [
+            "Ben was excited about the upcoming school science fair. He had always been fascinated by science and loved conducting experiments. This year, he wanted to create a project that would stand out.",
+            "After much thought, Ben decided to build a working model of a volcano. He spent days researching and gathering materials. His parents helped him set up a space in the garage where he could work on his project.",
+            "Ben carefully constructed the volcano using clay, paint, and other materials. He added details like trees and small houses around the base to make it look realistic. The most important part was the eruption mechanism, which he built using baking soda, vinegar, and food coloring.",
+            "On the day of the science fair, Ben was nervous but excited. He set up his project and waited for the judges to come by. When it was his turn, he demonstrated the volcano eruption, and the judges were impressed by his creativity and hard work.",
+            "Ben won first place at the science fair. He was thrilled and proud of his achievement. The experience taught him the value of dedication and creativity, and he couldn't wait to start planning for next year's project."
+        ]
+    },
+    "questions": [
+        {
+            "id": "q1",
+            "text": "What was Ben's project for the science fair?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A robot" },
+                { "value": "B", "text": "A solar system model" },
+                { "value": "C", "text": "A working model of a volcano" },
+                { "value": "D", "text": "A plant experiment" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q2",
+            "text": "How did Ben create the eruption mechanism for his volcano?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Using baking soda, vinegar, and food coloring" },
+                { "value": "B", "text": "Using water and dye" },
+                { "value": "C", "text": "Using chemicals from the lab" },
+                { "value": "D", "text": "Using a battery and wires" }
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "q3",
+            "text": "Where did Ben work on his project?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "In his bedroom" },
+                { "value": "B", "text": "In the school lab" },
+                { "value": "C", "text": "In the garage" },
+                { "value": "D", "text": "In the backyard" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q4",
+            "text": "How did the judges react to Ben's project?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "They were unimpressed" },
+                { "value": "B", "text": "They were confused" },
+                { "value": "C", "text": "They were impressed" },
+                { "value": "D", "text": "They were bored" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q5",
+            "text": "What did Ben learn from his experience at the science fair?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "The value of dedication and creativity" },
+                { "value": "B", "text": "The importance of winning" },
+                { "value": "C", "text": "That science is boring" },
+                { "value": "D", "text": "That he prefers sports" }
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "q6",
+            "text": "What was the result of Ben's participation in the science fair?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "He didn't place" },
+                { "value": "B", "text": "He won third place" },
+                { "value": "C", "text": "He won first place" },
+                { "value": "D", "text": "He won second place" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q7",
+            "text": "Write a summary of Ben's preparation and experience at the science fair.",
+            "type": "writeup",
+            "minWords": 40,
+            "sampleAnswer": "Ben decided to create a working model of a volcano for the school science fair. He spent days researching and gathering materials, and his parents helped him set up a workspace in the garage. Ben carefully constructed the volcano and built an eruption mechanism using baking soda, vinegar, and food coloring. On the day of the science fair, Ben demonstrated his project to the judges, who were impressed by his creativity and hard work. Ben won first place and learned the value of dedication and creativity.",
+            "keywords": ["Ben", "science fair", "project", "volcano", "eruption mechanism", "baking soda", "vinegar", "food coloring", "garage", "judges", "creativity", "hard work", "first place", "dedication"]
+        },
+        {
+            "id": "q8",
+            "text": "What lesson did Ben learn from participating in the science fair?",
+            "type": "writeup",
+            "minWords": 30,
+            "sampleAnswer": "Ben learned that hard work and creativity can lead to great achievements. The science fair taught him the importance of dedication and perseverance in pursuing his interests.",
+            "keywords": ["lesson", "Ben", "science fair", "hard work", "creativity", "dedication", "perseverance", "achievements"]
+        }
+    ]
+}

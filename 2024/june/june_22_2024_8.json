@@ -1,0 +1,107 @@
+{
+    "id": "june_22_2024_8",
+    "title": "The Secret Garden of Enchantment",
+    "description": "A whimsical story about a hidden garden filled with magical plants and creatures.",
+    "quiz_time": 1800,
+    "passage": {
+        "paragraphs": [
+            "In the heart of the city, hidden behind tall buildings, was a secret garden known only to a few. The garden was said to be enchanted, with magical plants and creatures that could only be seen by those with pure hearts.",
+            "One day, a young girl named Sophie discovered the garden while exploring the city. She was drawn to the colorful flowers and the soft glow that seemed to emanate from the garden. As she stepped inside, she was greeted by talking flowers and friendly animals.",
+            "Sophie spent hours in the garden, learning about the different magical plants and their unique properties. She met a wise old turtle who told her stories about the garden's history and the magical creatures that lived there.",
+            "The garden became Sophie's sanctuary, a place where she could escape from the busy city and find peace. She visited the garden every day, helping the plants grow and taking care of the animals.",
+            "One evening, the garden's enchantment began to fade. The plants wilted, and the animals grew weak. The wise old turtle explained that the garden's magic needed to be renewed with a special potion made from rare ingredients.",
+            "Determined to save the garden, Sophie set out on a quest to find the ingredients. She traveled to distant lands, overcoming obstacles and facing challenges along the way. With perseverance and the help of her new friends, Sophie gathered the ingredients and returned to the garden.",
+            "She prepared the potion and poured it over the garden. Slowly, the magic returned, and the garden bloomed with new life. Sophie had saved the enchanted garden, and it remained a place of wonder and beauty for all who visited."
+        ]
+    },
+    "questions": [
+        {
+            "id": "q1",
+            "text": "Where was the secret garden located?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "In a forest" },
+                { "value": "B", "text": "Behind tall buildings in the city" },
+                { "value": "C", "text": "Near a river" },
+                { "value": "D", "text": "On a mountain" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q2",
+            "text": "What did Sophie first notice about the garden?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "The talking flowers" },
+                { "value": "B", "text": "The soft glow emanating from it" },
+                { "value": "C", "text": "The wise old turtle" },
+                { "value": "D", "text": "The friendly animals" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q3",
+            "text": "What did the wise old turtle tell Sophie about?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "The city's history" },
+                { "value": "B", "text": "The garden's history and magical creatures" },
+                { "value": "C", "text": "How to grow plants" },
+                { "value": "D", "text": "The secret of talking flowers" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q4",
+            "text": "What happened to the garden's enchantment one evening?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "It grew stronger" },
+                { "value": "B", "text": "It began to fade" },
+                { "value": "C", "text": "It stayed the same" },
+                { "value": "D", "text": "It moved to another place" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q5",
+            "text": "What did Sophie need to do to save the garden?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Find a special potion made from rare ingredients" },
+                { "value": "B", "text": "Plant new flowers" },
+                { "value": "C", "text": "Move the animals" },
+                { "value": "D", "text": "Tell everyone about the garden" }
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "q6",
+            "text": "How did Sophie gather the ingredients for the potion?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "She bought them from a store" },
+                { "value": "B", "text": "She found them in the city" },
+                { "value": "C", "text": "She traveled to distant lands and overcame obstacles" },
+                { "value": "D", "text": "She asked her friends to get them" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q7",
+            "text": "Write a summary of Sophie's adventure in the enchanted garden.",
+            "type": "writeup",
+            "minWords": 40,
+            "sampleAnswer": "Sophie discovered a secret garden hidden behind tall buildings in the city. The garden was enchanted, with magical plants and creatures. Sophie spent time learning about the garden and helping it thrive. One evening, the enchantment began to fade, and the wise old turtle explained that a special potion was needed to renew the magic. Sophie set out on a quest to find the rare ingredients, traveling to distant lands and overcoming obstacles. With perseverance and the help of her new friends, Sophie gathered the ingredients and saved the enchanted garden. The garden remained a place of wonder and beauty.",
+            "keywords": ["Sophie", "secret garden", "city", "enchanted", "magical plants", "creatures", "wise old turtle", "helping", "enchantment", "fade", "special potion", "rare ingredients", "quest", "distant lands", "obstacles", "perseverance", "friends", "saved", "wonder", "beauty"]
+        },
+        {
+            "id": "q8",
+            "text": "What lesson did Sophie learn from her adventure?",
+            "type": "writeup",
+            "minWords": 30,
+            "sampleAnswer": "Sophie learned that determination and kindness can overcome any challenge. Her adventure taught her the importance of helping others and the value of preserving magical and beautiful places.",
+            "keywords": ["lesson", "Sophie", "adventure", "determination", "kindness", "overcome challenges", "helping others", "preserving", "magical", "beautiful places"]
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+{
+    "id": "june_22_2024",
+    "title": "Jack's Library Adventure",
+    "description": "A heartwarming story about Jack's journey of discovery and friendship in Rivertown's oldest library.",
+    "quiz_time": 1800,
+    "passage": {
+        "paragraphs": [
+            "Once upon a time, in the bustling city of Rivertown, there was a small library nestled between tall buildings. This library was special because it was the oldest building in the city, with a history that stretched back over two centuries. The library was a haven for book lovers, and its shelves were filled with countless stories from all over the world.",
+            "Every weekend, the library hosted a storytelling session for children. The sessions were led by Mrs. Thompson, a kind and wise librarian who had worked there for decades. She had a magical way of bringing stories to life, and children would sit in rapt attention as she read aloud.",
+            "One rainy Saturday, a new boy named Jack attended the session for the first time. Jack had recently moved to Rivertown and didn't know many people yet. He was shy but curious about the library and the stories it held. Mrs. Thompson welcomed him warmly and invited him to join the group.",
+            "As Mrs. Thompson read a story about a brave knight and a dragon, Jack's imagination soared. He pictured himself as the knight, embarking on daring adventures. After the session, Jack stayed behind and talked to Mrs. Thompson about the story. She encouraged him to borrow books and explore the library's many wonders.",
+            "Inspired by Mrs. Thompson's encouragement, Jack began visiting the library every day after school. He read books about distant lands, mythical creatures, and heroic deeds. The library became his sanctuary, a place where he could lose himself in the pages of a book and forget about his worries.",
+            "Over time, Jack made friends with other children who shared his love for reading. They formed a book club and met regularly to discuss their favorite stories. Jack's confidence grew, and he became an enthusiastic member of the group. The library, with its rich history and welcoming atmosphere, had become a place of friendship and adventure for Jack."
+        ]
+    },
+    "questions": [
+        {
+            "id": "q1",
+            "text": "What was the name of the city where the story took place?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Rivertown" },
+                { "value": "B", "text": "Willowbrook" },
+                { "value": "C", "text": "Brookfield" },
+                { "value": "D", "text": "Oakwood" }
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "q2",
+            "text": "Who led the storytelling sessions at the library?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Mr. Johnson" },
+                { "value": "B", "text": "Mrs. Thompson" },
+                { "value": "C", "text": "Jack" },
+                { "value": "D", "text": "Mrs. Smith" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q3",
+            "text": "What did Jack picture himself as during the story about the knight and the dragon?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "The dragon" },
+                { "value": "B", "text": "The knight" },
+                { "value": "C", "text": "The librarian" },
+                { "value": "D", "text": "The castle" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q4",
+            "text": "What did Mrs. Thompson encourage Jack to do?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Borrow books" },
+                { "value": "B", "text": "Draw pictures" },
+                { "value": "C", "text": "Write stories" },
+                { "value": "D", "text": "Play games" }
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "q5",
+            "text": "What did Jack discover about the library?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "It was boring" },
+                { "value": "B", "text": "It was a sanctuary" },
+                { "value": "C", "text": "It was haunted" },
+                { "value": "D", "text": "It was noisy" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q6",
+            "text": "How did Jack's confidence grow over time?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "He became an enthusiastic member of a book club" },
+                { "value": "B", "text": "He stopped visiting the library" },
+                { "value": "C", "text": "He only read at home" },
+                { "value": "D", "text": "He avoided making friends" }
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "q7",
+            "text": "Write a summary of Jack's journey from his first visit to the library to becoming a confident book club member.",
+            "type": "writeup",
+            "minWords": 40,
+            "sampleAnswer": "Jack's journey began with his first visit to the library on a rainy Saturday. He attended a storytelling session led by Mrs. Thompson, who read a story about a brave knight and a dragon. This session sparked Jack's imagination, and Mrs. Thompson's encouragement led him to borrow books and explore the library's many wonders. Jack started visiting the library every day after school, where he read about distant lands, mythical creatures, and heroic deeds. The library became his sanctuary, helping him forget his worries. Over time, Jack made friends with other children who shared his love for reading. They formed a book club and met regularly to discuss their favorite stories. Through these experiences, Jack's confidence grew, and he became an enthusiastic member of the group. The library, with its rich history and welcoming atmosphere, played a pivotal role in Jack's journey from a shy newcomer to a confident book club member.",
+            "keywords": ["Jack", "first visit", "library", "Mrs. Thompson", "storytelling session", "brave knight", "dragon", "imagination", "encouragement", "borrow books", "every day", "after school", "sanctuary", "reading", "friends", "book club", "confidence", "enthusiastic member"]
+        },
+        {
+            "id": "q8",
+            "text": "What lesson did Jack learn from his experiences?",
+            "type": "writeup",
+            "minWords": 30,
+            "sampleAnswer": "Jack learned that exploring new places and meeting new people could lead to personal growth and confidence. The library became a place of discovery and friendship, teaching him the value of curiosity and community.",
+            "keywords": ["lesson", "Jack", "experiences", "library", "Mrs. Thompson", "encouragement", "imagination", "reading", "confidence", "friendship", "book club", "newcomer", "welcoming", "adventures", "stories", "explore", "sanctuary", "inspire", "knowledge", "imagination"]
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Grade 6 Reading Comprehension Quiz</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <script>
+    </script>
+    <script src="/js/english_common.js"></script>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="/quizzes.html" id="nav-home">Quizzes</a>
+        <div class="topnav-right">
+            <a href="#" id="txtusername"></a>
+        </div>
+    </div>
+
+    <div id="loadingdiv" class="page-loader">
+        <div class="spinner"></div>
+        <div class="txt" id="loading-text">Processing<br>Please wait...</div>
+    </div>
+
+    <div class="quiz-container">
+        <div id="timer">Time Left: <span id="time">30:00</span></div>
+        <form id="quiz-form">
+            <div class="clearfix">
+                <div class="box passage" style="background-color:#ccc">
+                    <h2 id="passage-title"></h2>
+                    <p id="passage-p1"></p>
+                    <p id="passage-p2"></p>
+                    <p id="passage-p3"></p>
+                    <p id="passage-p4"></p>
+                    <p id="passage-p5"></p>
+                    <p id="passage-p6"></p>
+                    <p id="passage-p7"></p>
+                    <p id="passage-p8"></p>
+                    <p id="passage-p9"></p>
+                    <p id="passage-p10"></p>
+                    <p id="passage-p11"></p>
+                </div>
+                <div class="box questions" style="background-color:#ddd">
+                    <div id="questions-container" >
+                    </div>
+                    <button type="button" id="btnsubmitQuiz" onclick="submitQuiz()">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

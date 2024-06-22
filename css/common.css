@@ -56,12 +56,12 @@ body {
   }
   
   .correct {
-    color: green;
+    color: #28a745;
     font-size: 14px;
   }
 
   .improve {
-    color: yellow;
+    color: black;
     font-size: 14px;
   }
 

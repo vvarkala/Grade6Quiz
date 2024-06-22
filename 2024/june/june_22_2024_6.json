@@ -1,0 +1,105 @@
+{
+    "id": "june_22_2024_6",
+    "title": "The Adventure of the Whispering Woods",
+    "description": "A thrilling story about three friends exploring the mysterious Whispering Woods.",
+    "quiz_time": 1800,
+    "passage": {
+        "paragraphs": [
+            "The Whispering Woods were known for the strange sounds that seemed to come from the trees themselves. Few dared to enter, but three friends, Ella, Jake, and Ryan, were determined to uncover the woods' secrets.",
+            "Equipped with flashlights, a map, and plenty of snacks, they set out one evening just as the sun was setting. The deeper they ventured into the woods, the more eerie the whispers became. It sounded as if the trees were sharing secrets.",
+            "As they followed the map, they came across an ancient, overgrown path. The whispers grew louder, and they realized the path led to an old, abandoned house. The house was covered in ivy and looked like it hadn't been touched in years.",
+            "Inside the house, they found old furniture, cobwebs, and a dusty book on a pedestal. The book contained stories of the woods and a legend about a hidden treasure. According to the book, the treasure could only be found by those who listened to the whispers.",
+            "Using the clues from the book and following the whispers, the friends discovered a hidden door in the floor. They opened it to find a small chest filled with ancient coins and jewels. Excited, they took the treasure back to their town, where the discovery of the Whispering Woods' secrets became a legend."
+        ]
+    },
+    "questions": [
+        {
+            "id": "q1",
+            "text": "What were the Whispering Woods known for?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Their beautiful flowers" },
+                { "value": "B", "text": "The strange sounds from the trees" },
+                { "value": "C", "text": "The large animals" },
+                { "value": "D", "text": "The clear streams" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q2",
+            "text": "What did the friends find at the end of the ancient path?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A clear stream" },
+                { "value": "B", "text": "A hidden cave" },
+                { "value": "C", "text": "An old, abandoned house" },
+                { "value": "D", "text": "A meadow" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q3",
+            "text": "What did the dusty book contain?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Stories of the woods and a legend about a hidden treasure" },
+                { "value": "B", "text": "Old recipes" },
+                { "value": "C", "text": "A map of the town" },
+                { "value": "D", "text": "Spells" }
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "q4",
+            "text": "How did the friends find the hidden door?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "By listening to the whispers" },
+                { "value": "B", "text": "By digging" },
+                { "value": "C", "text": "By asking the townspeople" },
+                { "value": "D", "text": "By following a map" }
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "q5",
+            "text": "What was inside the small chest they found?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A map" },
+                { "value": "B", "text": "Jewels and ancient coins" },
+                { "value": "C", "text": "Old letters" },
+                { "value": "D", "text": "Tools" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q6",
+            "text": "How did the town react to the friends' discovery?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "They were angry" },
+                { "value": "B", "text": "They ignored it" },
+                { "value": "C", "text": "It became a legend" },
+                { "value": "D", "text": "They were disappointed" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q7",
+            "text": "Write a summary of the friends' adventure in the Whispering Woods.",
+            "type": "writeup",
+            "minWords": 40,
+            "sampleAnswer": "Ella, Jake, and Ryan ventured into the mysterious Whispering Woods to uncover its secrets. They followed an ancient path to an old, abandoned house where they found a dusty book that contained stories and a legend about a hidden treasure. Using the clues from the book and listening to the whispers, they found a hidden door and discovered a chest filled with ancient coins and jewels. Their discovery became a legend in their town.",
+            "keywords": ["Ella", "Jake", "Ryan", "Whispering Woods", "ancient path", "abandoned house", "dusty book", "stories", "legend", "hidden treasure", "clues", "whispers", "hidden door", "chest", "coins", "jewels", "town", "legend"]
+        },
+        {
+            "id": "q8",
+            "text": "What lesson did the friends learn from their adventure?",
+            "type": "writeup",
+            "minWords": 30,
+            "sampleAnswer": "The friends learned that curiosity and courage can lead to incredible discoveries. Their adventure taught them to listen carefully and work together to uncover hidden truths.",
+            "keywords": ["lesson", "friends", "adventure", "curiosity", "courage", "discoveries", "listening", "working together", "hidden truths"]
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "id": "june_22_2024_9",
+    "title": "The Legend of the Phoenix Feather",
+    "description": "A mythical story about a young boy named Max who embarks on a quest to find a legendary phoenix feather.",
+    "quiz_time": 1800,
+    "passage": {
+        "paragraphs": [
+            "Max had always been fascinated by legends and myths. One day, he read about a legendary phoenix feather that was said to grant the bearer great wisdom and strength. Determined to find it, Max set out on a quest.",
+            "His journey took him through dense forests, across vast deserts, and over towering mountains. Along the way, Max faced many challenges and met wise mentors who guided him.",
+            "In a hidden valley, Max found a majestic phoenix. The bird agreed to give him a feather, but only if Max could answer three riddles. Max used his knowledge and intuition to solve the riddles and earned the phoenix's trust.",
+            "The phoenix gave Max a single, glowing feather. As Max held the feather, he felt a surge of wisdom and strength. The phoenix told him that the true power of the feather was in the knowledge and experiences gained on his journey.",
+            "Max returned to his village with the phoenix feather. He used his newfound wisdom to help his community, sharing the lessons he learned and inspiring others to embark on their own quests for knowledge."
+        ]
+    },
+    "questions": [
+        {
+            "id": "q1",
+            "text": "What did Max read about that inspired his quest?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A dragon's egg" },
+                { "value": "B", "text": "A magical stone" },
+                { "value": "C", "text": "A legendary phoenix feather" },
+                { "value": "D", "text": "A hidden treasure" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q2",
+            "text": "What did Max have to do to earn the phoenix's feather?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Fight a dragon" },
+                { "value": "B", "text": "Solve three riddles" },
+                { "value": "C", "text": "Climb a mountain" },
+                { "value": "D", "text": "Find a hidden cave" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q3",
+            "text": "What did Max feel when he held the phoenix feather?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Fear" },
+                { "value": "B", "text": "Happiness" },
+                { "value": "C", "text": "Wisdom and strength" },
+                { "value": "D", "text": "Confusion" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q4",
+            "text": "What did the phoenix tell Max about the true power of the feather?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "It grants immortality" },
+                { "value": "B", "text": "It brings good luck" },
+                { "value": "C", "text": "It lies in the knowledge and experiences gained on the journey" },
+                { "value": "D", "text": "It can control fire" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q5",
+            "text": "How did Max use his newfound wisdom when he returned to his village?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "He kept it to himself" },
+                { "value": "B", "text": "He helped his community and inspired others" },
+                { "value": "C", "text": "He sold the feather" },
+                { "value": "D", "text": "He went on another quest" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q6",
+            "text": "What did Max face along his journey to find the phoenix feather?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Dense forests" },
+                { "value": "B", "text": "Vast deserts" },
+                { "value": "C", "text": "Towering mountains" },
+                { "value": "D", "text": "All of the above" }
+            ],
+            "answer": "D"
+        },
+        {
+            "id": "q7",
+            "text": "Write a summary of Max's quest to find the phoenix feather.",
+            "type": "writeup",
+            "minWords": 40,
+            "sampleAnswer": "Max read about a legendary phoenix feather that granted great wisdom and strength. Determined to find it, he set out on a quest through dense forests, vast deserts, and towering mountains. Along the way, he faced challenges and met wise mentors. In a hidden valley, he found a phoenix that gave him the feather after he solved three riddles. The phoenix told Max that the true power of the feather was in the knowledge and experiences gained on his journey. Max returned to his village and used his newfound wisdom to help his community and inspire others.",
+            "keywords": ["Max", "quest", "phoenix feather", "wisdom", "strength", "dense forests", "vast deserts", "towering mountains", "challenges", "wise mentors", "hidden valley", "phoenix", "riddles", "knowledge", "experiences", "village", "community", "inspire others"]
+        },
+        {
+            "id": "q8",
+            "text": "What lesson did Max learn from his quest?",
+            "type": "writeup",
+            "minWords": 30,
+            "sampleAnswer": "Max learned that the true power of the phoenix feather was in the knowledge and experiences he gained during his journey. His quest taught him the importance of perseverance, wisdom, and helping others.",
+            "keywords": ["lesson", "Max", "quest", "phoenix feather", "knowledge", "experiences", "perseverance", "wisdom", "helping others"]
+        }
+    ]
+}

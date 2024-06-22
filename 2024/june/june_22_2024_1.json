@@ -1,0 +1,105 @@
+{
+    "id": "june_22_2024_1",
+    "title": "Anna's Garden Surprise",
+    "description": "A delightful tale of Anna's discovery in her grandmother's magical garden.",
+    "quiz_time": 1800,
+    "passage": {
+        "paragraphs": [
+            "Anna loved spending her weekends at her grandmother's house. The house had a beautiful garden filled with flowers, trees, and a small pond. Anna's favorite spot was a hidden corner where her grandmother had planted a variety of herbs.",
+            "One sunny afternoon, Anna was exploring the garden when she noticed something sparkling near the herb patch. She walked over and found a small, intricately designed key. Curious, Anna took the key to her grandmother.",
+            "Her grandmother smiled and led her to a large, ancient oak tree at the back of the garden. She pointed to a tiny keyhole hidden in the trunk. With excitement, Anna inserted the key and turned it.",
+            "The tree opened to reveal a secret room filled with books, treasures, and a map. Her grandmother explained that it was a special place passed down through generations. Anna spent the rest of the day exploring the room, feeling like she had stepped into a fairy tale.",
+            "From that day on, Anna and her grandmother would often visit the secret room, reading stories and discovering new treasures. The garden had become even more magical to Anna, a place of wonder and adventure."
+        ]
+    },
+    "questions": [
+        {
+            "id": "q1",
+            "text": "Where did Anna find the key?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Near the pond" },
+                { "value": "B", "text": "In the herb patch" },
+                { "value": "C", "text": "In the oak tree" },
+                { "value": "D", "text": "In the house" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q2",
+            "text": "What did the key open?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A treasure chest" },
+                { "value": "B", "text": "A cupboard" },
+                { "value": "C", "text": "A secret room in the oak tree" },
+                { "value": "D", "text": "A door in the house" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q3",
+            "text": "What was inside the secret room?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Books and treasures" },
+                { "value": "B", "text": "Old clothes" },
+                { "value": "C", "text": "Paintings" },
+                { "value": "D", "text": "Toys" }
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "q4",
+            "text": "Who showed Anna the keyhole in the oak tree?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Her friend" },
+                { "value": "B", "text": "Her grandmother" },
+                { "value": "C", "text": "Her mother" },
+                { "value": "D", "text": "Her father" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q5",
+            "text": "What did Anna's grandmother say about the secret room?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "It was newly built" },
+                { "value": "B", "text": "It was a special place passed down through generations" },
+                { "value": "C", "text": "It was just for decoration" },
+                { "value": "D", "text": "It was a storage room" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q6",
+            "text": "How did Anna feel about the garden after discovering the secret room?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "Bored" },
+                { "value": "B", "text": "Afraid" },
+                { "value": "C", "text": "Excited" },
+                { "value": "D", "text": "Indifferent" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q7",
+            "text": "Write a summary of Anna's adventure in the garden and the secret room.",
+            "type": "writeup",
+            "minWords": 40,
+            "sampleAnswer": "Anna discovered a small key in her grandmother's garden near the herb patch. With her grandmother's guidance, she found a keyhole in an ancient oak tree that opened to reveal a secret room. Inside the room, Anna found books, treasures, and a map. The secret room, passed down through generations, became a place of wonder and adventure for Anna, making the garden even more magical.",
+            "keywords": ["Anna", "key", "garden", "herb patch", "oak tree", "secret room", "books", "treasures", "map", "grandmother", "wonder", "adventure", "magical"]
+        },
+        {
+            "id": "q8",
+            "text": "What lesson did Anna learn from her discovery in the garden?",
+            "type": "writeup",
+            "minWords": 30,
+            "sampleAnswer": "Anna learned that sometimes the most magical and special places are hidden in plain sight. Her discovery taught her to be curious and to explore her surroundings, as they might hold wonderful secrets and adventures.",
+            "keywords": ["lesson", "Anna", "discovery", "garden", "key", "secret room", "curiosity", "exploration", "wonder", "adventures"]
+        }
+    ]
+}

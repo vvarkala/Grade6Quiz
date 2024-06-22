@@ -1,0 +1,105 @@
+{
+    "id": "june_22_2024_7",
+    "title": "The Journey of the Silver Star",
+    "description": "An inspiring story about a young girl named Lily who follows a silver star to find her destiny.",
+    "quiz_time": 1800,
+    "passage": {
+        "paragraphs": [
+            "Lily had always dreamed of finding her true purpose. One night, as she gazed at the sky, she saw a bright silver star that seemed to call out to her. Determined to follow it, Lily packed her bag and set out on a journey.",
+            "The star led her through forests, over mountains, and across rivers. Along the way, she met people who were kind and offered her guidance. Each encounter taught her something new about herself and the world.",
+            "In a small village, Lily helped a farmer whose crops were failing. She shared her ideas and together, they found a solution. The grateful farmer gave her a charm as a token of appreciation.",
+            "As she continued her journey, Lily used the charm to help others she met along the way. The charm seemed to glow brighter with each good deed she did. She realized that her true purpose was to help others and spread kindness.",
+            "Eventually, the silver star led her back to her own village. She returned with a heart full of gratitude and a newfound sense of purpose. The star had guided her to discover her true calling, and she knew she was meant to bring light and hope to those around her."
+        ]
+    },
+    "questions": [
+        {
+            "id": "q1",
+            "text": "What did Lily see in the sky that inspired her journey?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A rainbow" },
+                { "value": "B", "text": "A silver star" },
+                { "value": "C", "text": "A shooting star" },
+                { "value": "D", "text": "A comet" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q2",
+            "text": "Who did Lily help in the small village?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A teacher" },
+                { "value": "B", "text": "A farmer" },
+                { "value": "C", "text": "A shopkeeper" },
+                { "value": "D", "text": "A blacksmith" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q3",
+            "text": "What did the farmer give Lily as a token of appreciation?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "A book" },
+                { "value": "B", "text": "A charm" },
+                { "value": "C", "text": "A map" },
+                { "value": "D", "text": "A bag of seeds" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q4",
+            "text": "What did Lily realize her true purpose was?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "To explore the world" },
+                { "value": "B", "text": "To become famous" },
+                { "value": "C", "text": "To help others and spread kindness" },
+                { "value": "D", "text": "To write a book" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q5",
+            "text": "How did the charm change as Lily continued her journey?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "It became heavier" },
+                { "value": "B", "text": "It glowed brighter with each good deed" },
+                { "value": "C", "text": "It got smaller" },
+                { "value": "D", "text": "It changed colors" }
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "q6",
+            "text": "Where did the silver star eventually lead Lily?",
+            "type": "choice",
+            "options": [
+                { "value": "A", "text": "To a distant city" },
+                { "value": "B", "text": "To a hidden cave" },
+                { "value": "C", "text": "Back to her own village" },
+                { "value": "D", "text": "To a mountain peak" }
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "q7",
+            "text": "Write a summary of Lily's journey and what she discovered.",
+            "type": "writeup",
+            "minWords": 40,
+            "sampleAnswer": "Lily followed a bright silver star that seemed to call out to her. The star led her through forests, over mountains, and across rivers. Along the way, she met people who offered her guidance and taught her new things. In a small village, she helped a farmer with failing crops and received a charm as a token of appreciation. As she continued her journey, the charm glowed brighter with each good deed. Lily realized that her true purpose was to help others and spread kindness. Eventually, the star led her back to her own village, where she returned with a newfound sense of purpose and a heart full of gratitude.",
+            "keywords": ["Lily", "journey", "silver star", "forests", "mountains", "rivers", "guidance", "small village", "farmer", "charm", "good deeds", "purpose", "help others", "spread kindness", "village", "gratitude"]
+        },
+        {
+            "id": "q8",
+            "text": "What lesson did Lily learn from following the silver star?",
+            "type": "writeup",
+            "minWords": 30,
+            "sampleAnswer": "Lily learned that her true purpose was to help others and spread kindness. Her journey taught her that acts of kindness and helping those in need bring light and hope to the world.",
+            "keywords": ["lesson", "Lily", "silver star", "true purpose", "help others", "spread kindness", "acts of kindness", "light", "hope"]
+        }
+    ]
+}
