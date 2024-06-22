@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NLP with TensorFlow.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
+</head>
+<body>
+  <h1>Student Response Analysis</h1>
+  <button onclick="showProcessing()">Analyze Response</button>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Response</th>
+        <th>Cosine Similarity</th>
+        <th>Score</th>
+        <th>Recommendations</th>
+      </tr>
+    </thead>
+    <tbody id="results">
+    </tbody>
+  </table>
+
+  <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); text-align:center; vertical-align:middle; line-height:100vh;">
+    <div style="display:inline-block; background-color:white; padding:20px; border-radius:10px;">
+      Processing...
+    </div>
+  </div>
+
+  <script>
+    function showProcessing() {
+      document.getElementById('lightbox').style.display = 'block';
+      analyzeResponse('The student response goes here.').then(() => {
+        document.getElementById('lightbox').style.display = 'none';
+      });
+    }
+
+    async function analyzeResponse(response) {
+      // Show processing message
+      const statusElement = document.getElementById('status');
+      //statusElement.textContent = 'Processing...';
+
+      // Load the Universal Sentence Encoder model once
+      const model = await use.load();
+
+      // The original passage and the student response
+      const passage = "Inspired by storyteller Elias at Willowbrook's Harvest Festival, Lily began writing daily in a gifted journal. Her growing talent led to a local publisher's offer, and her first book's success made Lily a beloved author, spreading joy and inspiration.";
+      const sentences = [passage, response];
+
+      // Compute sentence embeddings
+      const embeddings = await model.embed(sentences);
+
+      // Calculate cosine similarity
+      const passageEmbedding = embeddings.slice([0, 0], [1]);
+      const responseEmbedding = embeddings.slice([1, 0], [1]);
+      const similarity = tf.losses.cosineDistance(passageEmbedding, responseEmbedding, 1).dataSync();
+      const score = (1 - similarity[0]) * 100;
+
+      // Generate dynamic recommendations based on the score and content analysis
+      let recommendations = '';
+
+      // Check for length and detail
+      if (response.split(' ').length < 20) {
+        recommendations += 'Your response is a bit short. Try to provide more details. ';
+      }
+
+      // Check for specific feedback based on score ranges
+      if (score >= 80) {
+        recommendations += 'Great job! Your response is very similar to the passage. ';
+      } else if (score >= 60) {
+        recommendations += 'Good effort! Try to include more key points from the passage. ';
+      } else {
+        recommendations += 'Needs improvement. Focus on capturing the main ideas and details from the passage. ';
+      }
+
+      // Analyze content for key terms (simple example, could be improved with more sophisticated NLP techniques)
+      const keyTerms = ['main idea', 'detail', 'important'];
+      keyTerms.forEach(term => {
+        if (!response.includes(term)) {
+          recommendations += `Consider mentioning the term "${term}". `;
+        }
+      });
+
+      // Additional features for better scoring
+      const responseLength = response.split(' ').length;
+      const passageLength = passage.split(' ').length;
+      const lengthRatio = responseLength / passageLength;
+      if (lengthRatio < 0.5) {
+        recommendations += 'Try to provide a more comprehensive summary. ';
+      }
+
+      // Display results
+      const resultsTable = document.getElementById('results');
+      const row = document.createElement('tr');
+      const responseCell = document.createElement('td');
+      const similarityCell = document.createElement('td');
+      const scoreCell = document.createElement('td');
+      const recommendationsCell = document.createElement('td');
+
+      responseCell.textContent = response;
+      similarityCell.textContent = similarity[0].toFixed(4);
+      scoreCell.textContent = score.toFixed(2);
+      recommendationsCell.textContent = recommendations.trim();
+
+      row.appendChild(responseCell);
+      row.appendChild(similarityCell);
+      row.appendChild(scoreCell);
+      row.appendChild(recommendationsCell);
+      resultsTable.appendChild(row);
+
+      // Hide processing message
+      //statusElement.textContent = '';
+    }
+
+    // Example usage: analyze a single student response
+    const studentResponse = "Write a summary of Lily's journey from being inspired by Elias to becoming a published author, Write a summary of Lily's journey from being inspired by Elias to becoming a published author, Write a summary of Lily's journey from being inspired by Elias to becoming a published author";
+    analyzeResponse(studentResponse);
+  </script>
+</body>
+</html>

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade 6 Reading Comprehension Quiz</title>
-    <link rel="stylesheet" href="../js/quizcommon.css">
+    <link rel="stylesheet" href="/css/common.css" />
+    <script src="/js/common.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>  
-    <script src="../js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
 </head>
 <body>
     <div class="topnav">
@@ -19,12 +19,10 @@
         </div>
     </div>
 
-    <!-- PAGE LOADER : PLACE RIGHT AFTER BODY TAG -->
     <div id="loadingdiv" class="page-loader">
         <div class="spinner"></div>
         <div class="txt">Processing<br>Please wait...</div>
     </div>
-    <!-- PAGE LOADER END : PLACE RIGHT AFTER BODY TAG -->
 
     <div class="quiz-container">
         <div id="timer">Time Left: <span id="time">30:00</span></div>
@@ -141,6 +139,7 @@
     <script>
         //Define Variables
         let timeLeft = 1800; // 30 minutes
+        const quizname = "June21_2024";
         const correctAnswers = {
                 q1: {type:'multiplechoice', answer:'B'},
                 q2: {type:'multiplechoice', answer:'C'},
