@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hourly Heatmap</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow-x: auto;
+        }
+        .row {
+            display: flex;
+            align-items: center;
+        }
+        .hour {
+            margin: 1px;
+            height: 2rem;
+            width: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 0.75rem;
+            background-color: #ebedf0;
+        }
+        .hour[zero] {
+            background-color: #d3d3d3; /* Grey */
+        }
+        .hour[low] {
+            background-color: #ff0000; /* Red */
+        }
+        .hour[medium-low] {
+            background-color: #ff7f7f; /* Light Red */
+        }
+        .hour[medium] {
+            background-color: #ffbf00; /* Yellow */
+        }
+        .hour[medium-high] {
+            background-color: #80ff00; /* Light Green */
+        }
+        .hour[high] {
+            background-color: #00ff00; /* Green */
+        }
+        .hour[very-high] {
+            background-color: #008000; /* Dark Green */
+        }
+        .user-label {
+            width: 4rem;
+            text-align: right;
+            margin-right: 1rem;
+            white-space: nowrap;
+        }
+        .x-labels {
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 6rem;
+        }
+        .x-label {
+            width: 2rem;
+            height: 2rem;
+            margin: 1px;
+            text-align: center;
+            white-space: nowrap;
+            transform: rotate(-45deg);
+            transform-origin: left bottom;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            border-bottom: 1px solid #ccc;
+        }
+        @media (max-width: 600px) {
+            .hour {
+                height: 1.5rem;
+                width: 1.5rem;
+                font-size: 0.6rem;
+            }
+            .user-label {
+                width: 3rem;
+                margin-right: 0.5rem;
+                font-size: 0.75rem;
+            }
+            .x-label {
+                width: 1.5rem;
+                font-size: 0.75rem;
+                transform: rotate(-45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<contributions-calendar id="calendar"></contributions-calendar>
+
+<script>
+    customElements.define(
+        "contributions-calendar",
+        class extends HTMLElement {
+            MAX_ACTIVITIES_NUMBER = 0;
+            DATA = {};
+
+            build_grid_array(data) {
+                let grid_array = [];
+                for (let i = 0; i < data["y-labels"].length; i++) {
+                    let user_data = data["series"][i]["activities"];
+                    for (let j = 0; j < data["x-labels"].length; j++) {
+                        let activity = {
+                            count: user_data[j],
+                            user: data["y-labels"][i],
+                            hour: data["x-labels"][j]
+                        };
+                        grid_array.push(activity);
+                        if (user_data[j] > this.MAX_ACTIVITIES_NUMBER) {
+                            this.MAX_ACTIVITIES_NUMBER = user_data[j];
+                        }
+                    }
+                }
+                return grid_array;
+            }
+
+            build_hour(activity, row_number, col_number) {
+                const hour_template_string = `
+                    <template id="hour-template">
+                        <div class="hour"></div>
+                    </template>
+                `;
+
+                const parser = new DOMParser();
+                const hour_template = parser
+                    .parseFromString(hour_template_string, "text/html")
+                    .querySelector("#hour-template");
+                const hour_clone = hour_template.content.cloneNode(true);
+
+                let hour_container = hour_clone.querySelector(".hour");
+                hour_container.title = activity.count;
+                hour_container.id = `row-${row_number}-col-${col_number}`;
+                hour_container.setAttribute("user", activity.user);
+                hour_container.setAttribute("hour", activity.hour);
+                hour_container.setAttribute("activities", activity.count);
+                hour_container.textContent = activity.count;
+
+                if (activity.count === 0) {
+                    hour_container.setAttribute("zero", "");
+                } else if (activity.count > 30) {
+                    hour_container.setAttribute("very-high", "");
+                } else if (activity.count > 20) {
+                    hour_container.setAttribute("high", "");
+                } else if (activity.count > 15) {
+                    hour_container.setAttribute("medium-high", "");
+                } else if (activity.count > 10) {
+                    hour_container.setAttribute("medium", "");
+                } else if (activity.count > 5) {
+                    hour_container.setAttribute("medium-low", "");
+                } else if (activity.count > 0) {
+                    hour_container.setAttribute("low", "");
+                }
+
+                return hour_clone;
+            }
+
+            build_row(row, row_number) {
+                const row_template_string = `
+                    <template id="row-template">
+                        <div class="row">
+                            <div class="user-label"></div>
+                        </div>
+                    </template>
+                `;
+
+                const parser = new DOMParser();
+                const row_template = parser
+                    .parseFromString(row_template_string, "text/html")
+                    .querySelector("#row-template");
+                const row_clone = row_template.content.cloneNode(true);
+                const row_container = row_clone.querySelector(".row");
+                row_container.id = `row-${row_number}`;
+
+                const user_label = row_clone.querySelector(".user-label");
+                user_label.textContent = this.DATA["y-labels"][row_number];
+
+                for (let j = 0; j < row.length; j++) {
+                    const activity = row[j];
+                    const hour = this.build_hour(activity, row_number, j);
+                    row_container.appendChild(hour);
+                }
+
+                return row_clone;
+            }
+
+            build_container(grid_array) {
+                const container_template_string = `
+                    <template id="container-template">
+                        <div class="container">
+                            <div class="x-labels"></div>
+                            <div class="heatmap"></div>
+                        </div>
+                    </template>
+                `;
+
+                const parser = new DOMParser();
+                const container_template = parser
+                    .parseFromString(container_template_string, "text/html")
+                    .querySelector("#container-template");
+                const container_clone = container_template.content.cloneNode(true);
+                const heatmap_container = container_clone.querySelector(".heatmap");
+                const x_labels_container = container_clone.querySelector(".x-labels");
+
+                this.DATA["x-labels"].forEach(label => {
+                    const label_div = document.createElement("div");
+                    label_div.className = "x-label";
+                    label_div.textContent = label;
+                    x_labels_container.appendChild(label_div);
+                });
+
+                for (let i = 0; i < this.DATA["y-labels"].length; i++) {
+                    let row = grid_array.splice(0, this.DATA["x-labels"].length);
+                    let row_clone = this.build_row(row, i);
+                    heatmap_container.appendChild(row_clone);
+                }
+
+                return container_clone;
+            }
+
+            setData(data) {
+                this.DATA = data;
+            }
+
+            init(data) {
+                if (!!data) {
+                    this.setData(data);
+                }
+                this.draw();
+            }
+
+            draw() {
+                this.shadowRoot.innerHTML = `
+                    <style>
+                        .container {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            overflow-x: auto;
+                        }
+                        .row {
+                            display: flex;
+                            align-items: center;
+                        }
+                        .hour {
+                            margin: 1px;
+                            height: 2rem;
+                            width: 2rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: #000;
+                            font-size: 0.75rem;
+                            background-color: #ebedf0;
+                        }
+                        .hour[zero] {
+                            background-color: #d3d3d3; /* Grey */
+                        }
+                        .hour[low] {
+                            background-color: #ff0000; /* Red */
+                        }
+                        .hour[medium-low] {
+                            background-color: #ff7f7f; /* Light Red */
+                        }
+                        .hour[medium] {
+                            background-color: #ffbf00; /* Yellow */
+                        }
+                        .hour[medium-high] {
+                            background-color: #80ff00; /* Light Green */
+                        }
+                        .hour[high] {
+                            background-color: #00ff00; /* Green */
+                        }
+                        .hour[very-high] {
+                            background-color: #008000; /* Dark Green */
+                        }
+                        .user-label {
+                            width: 4rem;
+                            text-align: right;
+                            margin-right: 1rem;
+                            white-space: nowrap;
+                        }
+                        .x-labels {
+                            display: flex;
+                            justify-content: flex-start;
+                            margin-left: 6rem;
+                        }
+                        .x-label {
+                            width: 2rem;
+                            height: 2rem;
+                            margin: 1px;
+                            text-align: center;
+                            white-space: nowrap;
+                            transform: rotate(-45deg);
+                            transform-origin: left bottom;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+                            border-bottom: 1px solid #ccc;
+                        }
+                        @media (max-width: 600px) {
+                            .hour {
+                                height: 1.5rem;
+                                width: 1.5rem;
+                                font-size: 0.6rem;
+                            }
+                            .user-label {
+                                width: 3rem;
+                                margin-right: 0.5rem;
+                                font-size: 0.75rem;
+                            }
+                            .x-label {
+                                width: 1.5rem;
+                                font-size: 0.75rem;
+                                transform: rotate(-45deg);
+                            }
+                        }
+                    </style>
+                `;
+
+                let grid_array = this.build_grid_array(this.DATA);
+                let container_clone = this.build_container(grid_array);
+                this.shadowRoot.appendChild(container_clone);
+            }
+
+            constructor() {
+                super();
+                this.attachShadow({ mode: "open" });
+                this.dispatchEvent(
+                    new CustomEvent("contributions-calendar-ready", {
+                        detail: this,
+                        composed: true,
+                        bubbles: true,
+                    })
+                );
+            }
+        }
+    );
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const calendar = document.getElementById('calendar');
+        const data = {
+            "x-labels": ["0 AM", "1 AM", "2 AM", "3 AM", "4 AM", "5 AM", "6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM", "8 PM", "9 PM", "10 PM", "11 PM"],
+            "y-labels": ["user1", "user2", "user3", "user4", "user5", "user4"],
+            "series": [
+                {"activities": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]},
+                {"activities": [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]},
+                {"activities": [45, 27, 66, 32, 45, 23, 54, 33, 44, 23, 55, 23, 11, 13, 66, 34, 44, 23, 55, 23, 11, 13, 7, 66]},
+                {"activities": [23, 54, 33, 44, 23, 55, 23, 11, 13, 66, 34, 44, 23, 55, 23, 11, 13, 7, 66, 34, 44, 23, 55, 23]},
+                {"activities": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]},
+                {"activities": [34, 32, 87, 65, 9, 17, 40, 12, 17, 22, 13, 42, 46, 27, 42, 33, 17, 63, 47, 42, 1, 3, 7, 76]},
+                {"activities": [45, 27, 66, 32, 45, 23, 54, 33, 44, 23, 55, 23, 11, 13, 66, 34, 44, 23, 55, 23, 11, 13, 7, 66]},
+                {"activities": [23, 54, 33, 44, 23, 55, 23, 11, 13, 66, 34, 44, 23, 55, 23, 11, 13, 7, 66, 34, 44, 23, 55, 23]}
+            ]
+        };
+
+        calendar.init(data);
+    });
+</script>
+
+</body>
+</html>

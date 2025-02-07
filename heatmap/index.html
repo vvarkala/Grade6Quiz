@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <h2>Default Calendar</h2>
+
+    <contributions-calendar id="calendar"></contributions-calendar>
+    
+    <h2>Custom Styled Calendar</h2>
+    
+    <contributions-calendar id="anotherCalendar"></contributions-calendar>
+    </div>
+    <script defer src="contributions-calendar.js"></script>
+
+    <script>
+        document.addEventListener("contributions-calendar-day-selected", day_selected_listener);
+        function day_selected_listener(event) {
+            console.log('contributions-calendar-day-selected event for calendar #' + event.target.id);
+    
+            const date_contributions = event.detail;
+    
+            var date = new Date(parseInt(date_contributions.date))
+            const contributions = date_contributions.contributions;
+    
+            const statement = `${contributions} contribution(s) on ${date}`;
+            console.log(statement);
+        }
+    
+        document.addEventListener("contributions-calendar-ready", contributions_calendar_ready);
+        function contributions_calendar_ready(event) {
+            console.log('contributions-calendar-ready event for calendar #' + event.target.id);
+            const contributions_calendar = event.detail;
+    
+            let startDate = '2019-01-06T00:00:00.000Z';
+            let numberOfWeeks = 52;   
+            fetch('timestamps.json')
+                .then(response => response.json())
+                .then(contributions => {
+                    contributions_calendar.init(contributions, startDate, numberOfWeeks);
+    
+                    // // or alternatively do initialization via
+                    // contributions_calendar.setContributions(contributions);
+                    // contributions_calendar.setStartDate(startDate);
+                    // contributions_calendar.setNumberOfWeeks(numberOfWeeks);
+                    // contributions_calendar.draw();
+                });
+    
+        }
+    
+    </script>
+  </body>
+</html>
